@@ -1,0 +1,191 @@
+====================================
+AST Syntax notes and information for TroubleDays (it might be valid for other games using this engine)
+====================================
+~ The structure
+	- To specify that's it's really a .AST, the file need to begin with "ast = {" and end with a "}"
+		- This is the only "}" you'll encounter if the code is correct. Every other "}" has a comma with it.
+	- Every group (stuff between "{" and "}") has (kind of) a "command" assigned to it. It's the word surrounded by quotation marks. It's a statement and not a definition.
+	- A Block is a group of actions to do at the same time. Even if there's only one action, you have to make it a block, so add a pair of "{}"
+		ast =
+		{
+			Block lvl (delete this obviously xD)
+			{
+				{
+					Command lvl (replace this obviously xD)
+				},
+				{
+					another one (replace this obviously xD)
+				},
+			}
+		}
+
+~ Changing which script to start with
+	In gamestart.ast, change the line #19 and #20. Set the file names to your script's name without the extension.
+~ Creating new dialog
+	- To create new dialog, you need to do as such. Every time at "text" statement (see below) is hit, it'll read the next line. This is one huge block of text that wont be shown automatically. It doesn't mean anything if you don't use the text statement.
+	- Don't put this in a block btw.
+	text = {
+		[1] = {
+			en = {
+				name = {
+				"name",
+				name = "Lovelia"
+				},
+				{
+				"\"I've come to harvest your technoforce,Mr. Human.\"",
+				},
+			},
+		},
+	},
+		
+~ Executing LUA functions
+	- "Ex" for execute (I assume), time is a parameter of the function, and the function is "wait".
+	{
+     	"ex",
+  		time = 500,
+      	func = "wait"
+    },
+~ Setting up the BG
+	
+	- set is the way the image is placed and will be moved. Kinda like presets for CGs mostly.
+	- Time = Time it'll take to show the new image.
+	- (Optional) LV is the level the sprite is shown at. If the background is set at lv = 5, but Lovelia at lv = 3, you won't be able to se eher because she'll be behind the background.
+	{
+      	"bg",
+      	file = "ev_no01_1",
+      	path = ":ev/",
+      	set = "ev_no01",
+		time = 100
+   	},
+	- x and y are the original location. x2 and y2 are the location the bg is heading towards. The speed is, well... The speed.
+	Animation parameters:
+		speed = 60000,
+     	x = 30,
+    	x2 = -30,
+      	y = 10,
+      	y2 = -10,
+		zoom = 120
+	- Remove everything but the background
+		{"cgdel",id=-1},
+~ "text"
+	- This is where the text will go.
+	{
+   		{
+      		"text"
+    	},
+  	},
+~Showing CG 
+	- Since it's also a BG statement, the parameters from earlier should also be valid.
+	{
+      		"bg",
+      		alpha = 192,
+      		file = "cinema01",
+      		id = 5,
+      		lv = 5,
+      		path = ":cg/",
+      		rule = "cinema",
+      		sync = 0,
+      		time = 400,
+      		vague = 40
+    	},
+	- Remove everything but the background
+	    {
+			"cgdel",
+			id = -1
+		},
+
+~ FG (Foreground/Showing characters) 
+	- ロベリア = (Name of the girl in Japanese (which is used in the code))
+	- LV is the level the sprite is shown at. If the background is set at lv = 5, but Lovelia at lv = 3, you won't be able to se eher because she'll be behind the background.
+	- If you replace the two tlo_0 with tlo_1, Lovelia will be in her yukata outfit.
+	{
+		"fg",
+		ch = "ロベリア",
+		face = 06,
+		file = "tlo_0",
+		head = "tlo_0",
+		id = 13,
+		lv = 3,
+		mode = 3,
+		mx = 0,
+		my = 0,
+		pass = 1,
+		path = ":fg/lob/",
+		resize = 1,
+		scale = "no",
+		size = "no",
+		sync = 0
+	},
+
+	-Act
+	{
+        "fgact",
+        ch = "ロベリア",
+        act = "おじぎ",
+        lv = 4,
+        id = 13
+    },
+	- Act List
+		うんうん = Yeah Yeah
+		うなづく = Nodding
+		おじぎ = Bowing
+		いいえ = No
+		びっくり = Surprised
+~ Anime line Animation
+		{
+            "bg",
+            file="line2",
+            id=8,
+            lv=8,
+            notone=1,
+            path=":ani/",
+            sync=0,
+            time=400
+        },
+~ Transitions
+ 	- Dissolve (longer than usual if time isnt precised)
+	{
+      		"extrans",
+     		 time = 500
+   	},
+	- Makes the screen shake
+	{"quake"}
+
+
+~Sound stuff
+
+	- Play SFX
+	    {
+			"se",
+			id = 1,
+			file = "se016_o"
+		},
+	- Play BGM
+	    {
+			"bgm",
+			file = "bgm03"
+		},
+	
+
+	(The fadeouts/fadeins can all become just cuts if you set the time to 0)
+	- SFX Fadeout
+		{
+			"se",
+			stop = 1,
+			time = 1500,
+			id = 1
+		},
+	- BGM Fadeout
+	    {
+			"bgm",
+			stop = 1,
+			time = 1000
+		},
+	- Volume Fadeout
+	    {
+			"vostop",
+			time = 1000
+		},
+
+~ Hide textbox
+	{"msgoff"},

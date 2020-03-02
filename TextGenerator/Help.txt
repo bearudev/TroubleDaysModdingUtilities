@@ -1,0 +1,18 @@
+=======================
+Text Generator Help File (AST Utilities)
+=======================
+
+- Command Line Arguments
+You can precise the path of your scenario file as an argument if you don't want the application to ask you where your file is all the time.
+
+- Creating the scenario file
+A scenario file is a .txt file where you'll put the dialog you want to convert. The syntax to create a new line of dialog is the following:
+nameOfCharacter;line;
+Example -> Lovelia;Of course, Mr. Human!;
+No need to add quotation marks; They'll add themselves automatically.
+If you want to create dialog for the narrator, just write the line.
+Example -> I am saying something, but in my head.
+A line of dialog needs to all be in the same line of the .txt file. This means you can't click Enter UNLESS you want to create a new line.
+
+- Output
+The output/Converted text will be found in another .txt file named converted.txt in the same directory as the .exe and this file. Copy its content and put it in your the ast block of your ast file and you should be good to go!

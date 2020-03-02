@@ -1,0 +1,31 @@
+	text = {
+		[1] = {
+			en = {
+				{
+					"Hey!It is I, the narrator!",
+				},
+			},
+		},
+		[2] = {
+			en = {
+				name = {
+					"name",
+					name = "Lovelia"
+				},
+				{
+					"Hello, Mr. Human!",
+				},
+			},
+		},
+		[3] = {
+			en = {
+				name = {
+					"name",
+					name = "主人公"
+				},
+				{
+					"Hey!",
+				},
+			},
+		},
+	},
