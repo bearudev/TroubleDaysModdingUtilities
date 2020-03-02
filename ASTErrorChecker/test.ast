@@ -1,0 +1,168 @@
+ast = 
+{
+    {
+        {
+            "bg",
+            file = "bg01d",
+            path = ":bg/",
+            sync = 0,
+            speed = 60000,
+     	    x = 30,
+    	    x2 = -30,
+      	    y = 10,
+      	    y2 = -10,
+            zoom = 120
+        },
+        {
+            "bgm",
+            file = "bgm01"
+        },
+        {   
+            "text"
+        },
+
+    },
+    {
+        {
+            "bg",
+            file = "bg01d",
+            path = ":bg/",
+            sync = 0
+        },
+        {
+            "fg",
+            ch = "ロベリア",
+            face = 02,
+            file = "tlo_0",
+            head = "tlo_0",
+            id = 13,
+            lv = 3,
+            mode = 3,
+            mx = 0,
+            my = 0,
+            pass = 1,
+            path = ":fg/lob/",
+            resize = 1,
+            scale = "no",
+            size = "no",
+            sync = 0
+	    },
+        {
+            "extrans"
+        },
+        {
+            "quake"
+        },
+        {"bg",file="line2",id=8,lv=8,notone=1,path=":ani/",sync=0,time=400},
+        {
+            "fgact",
+            ch = "ロベリア",
+            act = "おじぎ",
+            lv = 3,
+            id = 13
+        },
+        {   
+            "text"
+        },
+    },
+    {
+        {"cgdel",id=-1},
+        {
+            "fg",
+            ch = "ロベリア",
+            face = 05,
+            file = "tlo_0",
+            head = "tlo_0",
+            id = 13,
+            lv = 3,
+            mode = 3,
+            mx = 0,
+            my = 0,
+            pass = 1,
+            path = ":fg/lob/",
+            resize = 1,
+            scale = "no",
+            size = "no",
+            sync = 0
+	    },
+        {
+            "fgact",
+            ch = "ロベリア",
+            act = "うんうん",
+            lv = 3,
+            id = 13
+        },
+        {   
+            "text"
+        },
+    },
+    text = {
+		[1] = {
+			en = {
+				name = {
+				"name",
+				name = "Lovelia"
+				},
+				{
+				"\"I've come to harvest your technoforce,Mr. Human.\"",
+				},
+			},
+		},
+        [2] = {
+			en = {
+				name = {
+				"name",
+				name = "Lovelia"
+				},
+				{
+				"\"Hi! I'm Lovelia!\"",
+				},
+			},
+		},
+        [3] = {
+			en = {
+				name = {
+				"name",
+				name = "Lovelia"
+				},
+				{
+				"\"...and, yes, I'm cute!\"",
+				},
+			},
+		},
+        [4] = {
+			en = {
+				name = {
+				"name",
+				name = "Lovelia"
+				},
+				{
+				"\"...but I still want to have fun!\"",
+				},
+			},
+		},
+
+        [5] = {
+			en = {
+				name = {
+				"name",
+				name = "Lovelia"
+				},
+				{
+				"\"So... I wouldn't mind doing it without harvesting it~!\"",
+				},
+			},
+		},
+        [6] = {
+			en = {
+				name = {
+				"name",
+				name = "ComboDev"
+				},
+				{
+				"\"Alright, this is where you calm the FUCKC DODNWAD ASM\"",
+				},
+			},
+		},
+	},
+}
