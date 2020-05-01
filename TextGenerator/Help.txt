@@ -7,8 +7,8 @@ You can precise the path of your scenario file as an argument if you don't want 
 
 - Creating the scenario file
 A scenario file is a .txt file where you'll put the dialog you want to convert. The syntax to create a new line of dialog is the following:
-nameOfCharacter;line;
-Example -> Lovelia;Of course, Mr. Human!;
+nameOfCharacter;line
+Example -> Lovelia;Of course, Mr. Human!
 No need to add quotation marks; They'll add themselves automatically.
 If you want to create dialog for the narrator, just write the line.
 Example -> I am saying something, but in my head.

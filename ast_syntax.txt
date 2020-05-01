@@ -76,7 +76,7 @@ AST Syntax notes and information for TroubleDays (it might be valid for other ga
   	},
 ~Showing CG 
 	- Since it's also a BG statement, the parameters from earlier should also be valid.
-	{
+		{
       		"bg",
       		alpha = 192,
       		file = "cinema01",
@@ -95,7 +95,7 @@ AST Syntax notes and information for TroubleDays (it might be valid for other ga
 		},
 
 ~ FG (Foreground/Showing characters) 
-	- ロベリア = (Name of the girl in Japanese (which is used in the code))
+	- ロベリア = (Name of Lovelia in Japanese (used in the code))
 	- LV is the level the sprite is shown at. If the background is set at lv = 5, but Lovelia at lv = 3, you won't be able to se eher because she'll be behind the background.
 	- If you replace the two tlo_0 with tlo_1, Lovelia will be in her yukata outfit.
 	{
@@ -158,7 +158,7 @@ AST Syntax notes and information for TroubleDays (it might be valid for other ga
 	    {
 			"se",
 			id = 1,
-			file = "se016_o"
+			file = "se062_a"
 		},
 	- Play BGM
 	    {
