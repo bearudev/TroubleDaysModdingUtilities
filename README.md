@@ -8,4 +8,4 @@ Basically, they're tools for modding the game. [I made a mod to prove that it is
 ![Discord](https://i.imgur.com/ZOKp8LH.png)
 
 Please do not claim these programs as your own and... Yeaaah xD.
-If you have any questions or ideas for AST tools, contact me on Discord: ComboDev#2071
+If you have any questions or ideas for AST tools, contact me on Discord: ComboDev#0026 OR combodev@mail.com
